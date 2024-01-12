@@ -15,11 +15,12 @@ Return k
 
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
+        #if list is empty return 0
         if len(nums)==0:
             return 0
-        index = 0
+        index = 0 #initialize the index
         for i in range(1, len(nums)):
-            if nums[i] != nums[index]:
+            if nums[i] != nums[index]: #compare with previous 
                 index +=1
                 nums[index]=nums[i]
         return index+1
